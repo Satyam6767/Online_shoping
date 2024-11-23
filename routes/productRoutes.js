@@ -8,7 +8,7 @@ const Review = require('../models/review');
 // displaying all the products
 router.get('/products' , async(req,res)=>{
     try{
-        let products = await Products.find({});
+        let products = await Product.find({});
         res.render('products/index' , {products});
     }
     catch(e){
